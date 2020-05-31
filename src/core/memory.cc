@@ -914,7 +914,7 @@ bool cpu_pages::initialize() {
     assert(cpu_id < max_cpus);
     all_cpus[cpu_id] = this;
     auto base = mem_base() + (size_t(cpu_id) << cpu_id_shift);
-    auto size = 32 << 20;  // Small size for bootstrap
+    auto size = 32 << 23;  // Small size for bootstrap
     auto r = ::mmap(base, size,
             PROT_READ | PROT_WRITE,
             MAP_PRIVATE | MAP_ANONYMOUS | MAP_FIXED,

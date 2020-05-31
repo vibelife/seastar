@@ -21,7 +21,7 @@
 
 #include <random>
 
-#include <linux/if.h>
+#include <net/if.h>
 #include <linux/netlink.h>
 #include <linux/rtnetlink.h>
 #include <net/route.h>
